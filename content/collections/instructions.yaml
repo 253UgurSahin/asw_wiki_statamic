@@ -1,0 +1,11 @@
+title: Instructions
+template: instructions/show
+layout: layout
+taxonomies:
+  - category
+revisions: false
+route: '{parent_uri}/{ categories }/{slug}'
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

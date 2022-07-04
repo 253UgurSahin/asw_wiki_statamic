@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{{ excerpt ?? title }}">
+        <meta name="theme-color" content="00908F">
+
+        <title>{{ title }} — {{ settings:site_name }}</title>
+
+        
+        <!-- Styles -->
+        <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
+
+        <!-- Script -->
+        <script src="{{ mix src='/js/site.js' }}" defer></script>
+    </head>
+
+    <body class="font-sans leading-normal text-grey-800">
+        <div class="w-full min-h-screen flex flex-col text-gray-900">
+            {{ partial:meta.nav }}
+
+            {{ partial:meta.breadcrumbs }}
+
+            <div class="flex-grow w-full py-6">
+                {{ template_content }}
+            </div>
+        
+            {{ partial:meta.footer }}
+        </div>
+    </body>
+
+</html>

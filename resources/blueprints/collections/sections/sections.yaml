@@ -1,0 +1,185 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: type
+        field:
+          options:
+            bard: Content
+            gallery: Images
+            entries: Entries
+            cards: Cards
+          multiple: false
+          max_items: 1
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: false
+          default: bard
+          display: Type
+          type: select
+          icon: select
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: content
+        field:
+          always_show_set_button: false
+          buttons:
+            - h2
+            - h3
+            - bold
+            - italic
+            - unorderedlist
+            - orderedlist
+            - removeformat
+            - quote
+            - anchor
+            - image
+            - table
+          save_html: false
+          toolbar_mode: fixed
+          link_noopener: false
+          link_noreferrer: false
+          target_blank: false
+          reading_time: false
+          fullscreen: true
+          allow_source: true
+          enable_input_rules: true
+          enable_paste_rules: true
+          antlers: false
+          display: Content
+          type: bard
+          icon: bard
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          if:
+            type: 'equals bard'
+      -
+        handle: galley
+        field:
+          mode: list
+          container: assets
+          folder: /
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          display: Galley
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          if:
+            type: 'equals gallery'
+      -
+        handle: collection
+        field:
+          mode: default
+          create: true
+          collections:
+            - instructions
+          display: Collection
+          type: entries
+          icon: entries
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          if:
+            type: 'equals entries'
+      -
+        handle: grid_field
+        field:
+          fields:
+            -
+              handle: banner
+              field:
+                mode: list
+                container: assets
+                folder: /
+                restrict: false
+                allow_uploads: true
+                show_filename: true
+                display: Banner
+                type: assets
+                icon: assets
+                width: 33
+                listable: hidden
+                instructions_position: above
+                read_only: false
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: title
+                type: text
+                icon: text
+                width: 50
+                listable: hidden
+                instructions_position: above
+                read_only: false
+            -
+              handle: content
+              field:
+                always_show_set_button: false
+                buttons:
+                  - h2
+                  - h3
+                  - bold
+                  - italic
+                  - unorderedlist
+                  - orderedlist
+                  - removeformat
+                  - quote
+                  - anchor
+                  - image
+                  - table
+                save_html: false
+                toolbar_mode: fixed
+                link_noopener: false
+                link_noreferrer: false
+                target_blank: false
+                reading_time: false
+                fullscreen: true
+                allow_source: true
+                enable_input_rules: true
+                enable_paste_rules: true
+                antlers: false
+                display: Content
+                type: bard
+                icon: bard
+                listable: hidden
+                instructions_position: above
+                read_only: false
+          mode: table
+          min_rows: 1
+          reorderable: true
+          display: 'Grid Field'
+          type: grid
+          icon: grid
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          if:
+            type: 'equals cards'
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+title: Sections

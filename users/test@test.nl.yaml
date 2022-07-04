@@ -1,0 +1,8 @@
+name: tester
+super: true
+id: 63d2f455-f9f5-44fe-8a26-25b54dd98a09
+password_hash: $2y$10$QSus77K6e2cVaGI9/Y1anu7xdNI5ZJVQdz6XqCtOCrJ0QrpcrCvtG
+preferences:
+  assets:
+    assets:
+      mode: grid
