@@ -10,57 +10,16 @@ sections:
           validate:
             - required
       -
-        handle: banner
+        handle: entries
         field:
-          mode: list
-          container: assets
-          folder: /
-          restrict: false
-          allow_uploads: true
-          show_filename: true
-          display: Banner
-          type: assets
-          icon: assets
-          listable: hidden
-          instructions_position: above
-          read_only: false
-      -
-        handle: content
-        field:
-          always_show_set_button: false
-          buttons:
-            - h1
-            - h2
-            - h3
-            - bold
-            - italic
-            - unorderedlist
-            - orderedlist
-            - removeformat
-            - quote
-            - anchor
-            - image
-            - table
-            - code
-            - codeblock
-          container: assets
-          save_html: false
-          toolbar_mode: fixed
-          link_noopener: false
-          link_noreferrer: false
-          target_blank: false
-          link_collections:
+          mode: default
+          create: true
+          collections:
             - instructions
-            - pages
-          reading_time: false
-          fullscreen: true
-          allow_source: true
-          enable_input_rules: true
-          enable_paste_rules: true
-          antlers: false
-          display: content
-          type: bard
-          icon: bard
+            - sections
+          display: Entries
+          type: entries
+          icon: entries
           listable: hidden
           instructions_position: above
           read_only: false
@@ -86,4 +45,5 @@ sections:
           create: true
           validate:
             - required
+          max_items: 1
 title: Instructions

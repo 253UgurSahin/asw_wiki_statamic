@@ -1,1 +1,9 @@
-category -> index
+<div class="container prose">
+    {{ taxonomy:category }}
+        <div class="relative flex flex-wrap flex-row items-center gap-x-4">
+            <a href="{{ url }}" class="text-3xl font-bold no-underline">{{ title }}</a>
+            <span>-</span>
+            <p>{{ slug }}</p>
+        </div>
+    {{ /taxonomy:category }}
+</div>

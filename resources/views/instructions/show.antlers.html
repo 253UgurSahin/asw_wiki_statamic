@@ -1,9 +1,7 @@
-<div class="container">
-    <h1 class="text-4xl sm:text-5xl md:text-6xl">
-        {{ title }}
-    </h1>
+{{ if entries }}
 
-    <div class="prose max-w-screen-lg mx-auto">
-        {{ content }}
-    </div>
-</div>
+    {{ entries }}
+        {{ partial:components.{{ type }} }}
+    {{ /entries }}
+
+{{ /if }}

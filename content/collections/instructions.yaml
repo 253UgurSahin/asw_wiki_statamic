@@ -4,7 +4,7 @@ layout: layout
 taxonomies:
   - category
 revisions: false
-route: '{parent_uri}/{ categories }/{slug}'
+route: '{parent_uri}/category/{category}/{slug}'
 sort_dir: asc
 date_behavior:
   past: public

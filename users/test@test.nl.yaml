@@ -6,3 +6,9 @@ preferences:
   assets:
     assets:
       mode: grid
+  collections:
+    instructions:
+      columns:
+        - title
+        - slug
+        - category

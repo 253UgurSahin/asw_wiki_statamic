@@ -14,7 +14,7 @@ sections:
         field:
           options:
             bard: Content
-            gallery: Images
+            banner: Banner
             entries: Entries
             cards: Cards
           multiple: false
@@ -31,6 +31,18 @@ sections:
           listable: hidden
           instructions_position: above
           read_only: false
+      -
+        handle: default
+        field:
+          default: true
+          display: Default
+          type: toggle
+          icon: toggle
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          if:
+            type: 'equals banner'
       -
         handle: content
         field:
@@ -66,8 +78,9 @@ sections:
           read_only: false
           if:
             type: 'equals bard'
+            default: 'equals false'
       -
-        handle: galley
+        handle: banner
         field:
           mode: list
           container: assets
@@ -75,14 +88,14 @@ sections:
           restrict: false
           allow_uploads: true
           show_filename: true
-          display: Galley
+          display: Banner
           type: assets
           icon: assets
           listable: hidden
           instructions_position: above
           read_only: false
           if:
-            type: 'equals gallery'
+            type: 'equals banner'
       -
         handle: collection
         field:

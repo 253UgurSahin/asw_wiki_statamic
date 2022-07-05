@@ -10,40 +10,20 @@ sections:
           type: text
           display: 'Site Name'
       -
-        handle: social
+        handle: favicon
         field:
-          fields:
-            -
-              handle: icon
-              field:
-                container: assets
-                mode: list
-                restrict: true
-                folder: site/social-icons
-                allow_uploads: true
-                max_files: 1
-                type: assets
-                display: Icon
-                width: 33
-            -
-              handle: name
-              field:
-                type: text
-                display: Name
-            -
-              handle: url
-              field:
-                character_limit: 0
-                type: text
-                display: URL
-          mode: table
-          add_row: 'Add Link'
-          reorderable: true
-          type: grid
-          instructions: 'Set any social media links'
-          display: Social
-          instructions_position: above
+          mode: list
+          container: assets
+          folder: /
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Favicon
+          type: assets
+          icon: assets
           listable: hidden
+          instructions_position: above
           read_only: false
   meta:
     display: meta

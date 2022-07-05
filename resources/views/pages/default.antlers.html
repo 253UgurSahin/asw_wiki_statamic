@@ -1,11 +1,26 @@
-<div class="container ">
+<div class="container prose">
+    <hr />
+        <h1>Category</h1>
+    <hr />
+
+    {{ taxonomy:category }}
+        <div class="relative flex flex-wrap flex-row items-center gap-x-4">
+            <a href="{{ url }}" class="text-3xl font-bold no-underline">{{ title }}</a>
+            <span>-</span>
+            <p>{{ slug }}</p>
+        </div>
+    {{ /taxonomy:category }}
+
+    <hr />
+        <h1>Pages</h1>
+    <hr />
+
 
     {{ sections }}
-        <div class="relative">
-            <h1 class="border-b-2 pb-2 border-red-asw">{{ title }}</h1>
-                
-
-            {{ partial:components.{{ type }} }}
+        <div class="relative flex flex-wrap flex-row items-center gap-x-4">
+            <a href="{{ url }}" class="text-3xl font-bold no-underline">{{ title }}</a>
+            <span>-</span>
+            <p>{{ slug }}</p>
         </div>
     {{ /sections }}
 

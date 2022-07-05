@@ -19,6 +19,7 @@ sections:
           create: true
           collections:
             - sections
+            - instructions
           display: Sections
           type: entries
           icon: entries
