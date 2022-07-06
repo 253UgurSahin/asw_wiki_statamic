@@ -12,3 +12,15 @@ preferences:
         - title
         - slug
         - category
+    sections:
+      columns:
+        - title
+        - slug
+        - go_over
+  taxonomies:
+    category:
+      columns:
+        - title
+        - slug
+        - icon
+        - taxonomy

@@ -11,6 +11,7 @@
 
         
         <!-- Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
         <link rel="stylesheet" href="{{ mix src='css/tailwind.css' }}">
         <link rel="shortcut icon" href="{{ settings:favicon }}" type="image/x-icon">
 
@@ -18,17 +19,18 @@
         <script src="{{ mix src='/js/site.js' }}" defer></script>
     </head>
 
-    <body class="font-sans leading-normal text-grey-800">
-        <div class="w-full min-h-screen flex flex-col text-gray-900">
+    <body id="app" class="font-sans leading-normal text-gray-800 bg-gray-100">
+        <div class="relative w-full flex flex-row text-gray-900">
             {{ partial:meta.nav }}
-
-            {{ partial:meta.breadcrumbs }}
-
-            <div class="flex-grow w-full">
+            
+            <div class="flex-grow">
+                {{ partial:meta.breadcrumbs }}
+                
                 {{ template_content }}
+
+                {{ partial:meta.footer }}
             </div>
-        
-            {{ partial:meta.footer }}
+            
         </div>
     </body>
 

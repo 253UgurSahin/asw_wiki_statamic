@@ -1,27 +1,36 @@
-<div class="container prose">
-    <hr />
-        <h1>Category</h1>
-    <hr />
+{{ if get:q }}
+    {{# zoek balk #}}
+    <div class="w-full h-full max-h-[50vh] bg-red-asw text-white py-6 flex">
+        <div class="container flex flex-grow flex-col justify-around">
+            <h1 class="mx-auto w-fit">Heb je hulp nodig?</h1>
 
-    {{ taxonomy:category }}
-        <div class="relative flex flex-wrap flex-row items-center gap-x-4">
-            <a href="{{ url }}" class="text-3xl font-bold no-underline">{{ title }}</a>
-            <span>-</span>
-            <p>{{ slug }}</p>
+            <form action="/" class="relative max-w-screen-md w-full mx-auto">
+                <vue-input type="text" name="q" placeholder="search..."></vue-input>
+                <button type="submit" class="absolute top-5 right-5 text-red-asw">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
         </div>
-    {{ /taxonomy:category }}
+    </div>
 
-    <hr />
-        <h1>Pages</h1>
-    <hr />
+    {{ partial:components.searchresults }}
 
+{{ else }}
 
-    {{ sections }}
-        <div class="relative flex flex-wrap flex-row items-center gap-x-4">
-            <a href="{{ url }}" class="text-3xl font-bold no-underline">{{ title }}</a>
-            <span>-</span>
-            <p>{{ slug }}</p>
-        </div>
-    {{ /sections }}
+    {{ partial:components.search }}
 
-</div>
+    {{ if sections }}
+
+        {{ sections }}
+
+            {{ if type }}
+
+                {{ partial:components.{{ type }} title="{{ title }}" }}
+
+            {{ /if }}
+
+        {{ /sections }}
+
+    {{ /if }}
+
+{{ /if }}

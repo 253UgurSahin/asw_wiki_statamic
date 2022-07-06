@@ -2,6 +2,4 @@ title: Settings
 data:
   site_name: 'ASW Wiki'
   favicon: meta/asw_logo.png
-  nav_image:
-    - meta/asw_logo.png
-    - meta/asw_text.png
+  nav_image: meta/asw_logo.png

@@ -17,6 +17,7 @@ sections:
             banner: Banner
             entries: Entries
             cards: Cards
+            search: Search
           multiple: false
           max_items: 1
           clearable: false
@@ -30,19 +31,36 @@ sections:
           icon: select
           listable: hidden
           instructions_position: above
-          read_only: false
+          visibility: visible
       -
-        handle: default
+        handle: go_over
         field:
-          default: true
-          display: Default
+          default: false
+          display: 'Go over'
           type: toggle
           icon: toggle
           listable: hidden
           instructions_position: above
-          read_only: false
+          visibility: visible
           if:
             type: 'equals banner'
+      -
+        handle: how_much
+        field:
+          input_type: text
+          antlers: false
+          display: 'How Much?'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          if:
+            go_over: 'equals true'
+          placeholder: '15'
+          character_limit: 2
+          prepend: 'Value in rem'
+          append: 'Value in rem'
       -
         handle: content
         field:
@@ -75,10 +93,8 @@ sections:
           icon: bard
           listable: hidden
           instructions_position: above
-          read_only: false
           if:
             type: 'equals bard'
-            default: 'equals false'
       -
         handle: banner
         field:
@@ -93,7 +109,7 @@ sections:
           icon: assets
           listable: hidden
           instructions_position: above
-          read_only: false
+          visibility: visible
           if:
             type: 'equals banner'
       -
@@ -108,7 +124,6 @@ sections:
           icon: entries
           listable: hidden
           instructions_position: above
-          read_only: false
           if:
             type: 'equals entries'
       -
@@ -184,7 +199,6 @@ sections:
           icon: grid
           listable: hidden
           instructions_position: above
-          read_only: false
           if:
             type: 'equals cards'
   sidebar:

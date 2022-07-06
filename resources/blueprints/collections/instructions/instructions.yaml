@@ -10,19 +10,31 @@ sections:
           validate:
             - required
       -
-        handle: entries
+        handle: sort_explan
+        field:
+          antlers: false
+          display: 'Sort explanation'
+          type: textarea
+          icon: textarea
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  page:
+    display: page
+    fields:
+      -
+        handle: sections
         field:
           mode: default
           create: true
           collections:
-            - instructions
             - sections
-          display: Entries
+          display: Sections
           type: entries
           icon: entries
           listable: hidden
           instructions_position: above
-          read_only: false
+          visibility: visible
   sidebar:
     display: Sidebar
     fields:
@@ -41,7 +53,6 @@ sections:
           mode: select
           instructions_position: above
           listable: hidden
-          read_only: false
           create: true
           validate:
             - required

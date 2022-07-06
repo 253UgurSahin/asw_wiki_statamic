@@ -19,13 +19,12 @@ sections:
           create: true
           collections:
             - sections
-            - instructions
           display: Sections
           type: entries
           icon: entries
           listable: hidden
           instructions_position: above
-          read_only: false
+          visibility: visible
   sidebar:
     display: Sidebar
     fields:
@@ -34,6 +33,17 @@ sections:
         field:
           type: slug
           localizable: true
+      -
+        handle: template
+        field:
+          hide_partials: true
+          folder: pages
+          display: Template
+          type: template
+          icon: template
+          listable: hidden
+          instructions_position: above
+          visibility: visible
       -
         handle: parent
         field:
