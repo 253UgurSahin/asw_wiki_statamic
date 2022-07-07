@@ -1,21 +1,9 @@
-<nav class="w-fit h-screen bg-gray-900 py-2 font-semibold sticky top-0 left-0">
-    <div class="flex flex-col h-full items-between px-2 md:px-4">
-        <a href="/" class="mb-16">
-            <div class="h-12 w-12 w-auto flex flex-wrap justify-center items-center bg-white rounded-2xl p-2 md:h-14 md:w-14 transition-all duration-300 hover:rounded-3xl">
-                {{ settings:nav_image }}
-                    <img src="{{ url }}" alt="asw logo image" class="h-full {{ if last }} hidden sm:inline-block {{ /if }}" />
-                {{ /settings:nav_image }}
-            </div>
-        </a>
+<nav class="sticky top-0 h-screen bg-zinc-800">
+    <div class="flex flex-col px-2 md:px-4 py-10">
+        {{ partial:meta.nav.logo }}
 
-        <div class="flex flex-grow flex-col gap-y-2">
-            {{ taxonomy:category }}
-                <a href="{{ url }}">
-                    <div class="h-12 w-12 w-auto flex flex-wrap justify-center items-center bg-gray-700 rounded-2xl p-2 transition-all duration-300 hover:rounded-3xl">
-                        {{ svg src="{{ icon }}" class="text-white fill-current h-full w-full" }}
-                    </div>
-                </a>
-            {{ /taxonomy:category }}
+        <div class="mt-10 flex flex-col gap-y-2">
+            {{ partial:meta.nav.items }}
         </div>
     </div>
 </nav>

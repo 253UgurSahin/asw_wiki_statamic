@@ -20,17 +20,21 @@
     </head>
 
     <body id="app" class="font-sans leading-normal text-gray-800 bg-gray-100">
-        <div class="relative w-full flex flex-row text-gray-900">
+        <div class="relative flex flex-row">
             {{ partial:meta.nav }}
-            
-            <div class="flex-grow">
+
+            <div class="w-full flex flex-col">
+                
+                {{ partial:components.search }}
+                
                 {{ partial:meta.breadcrumbs }}
                 
-                {{ template_content }}
-
-                {{ partial:meta.footer }}
+                <div class="flex-grow">
+                    {{ template_content }}
+                </div>
+                
+                {{ partial:meta.footer }}    
             </div>
-            
         </div>
     </body>
 

@@ -96,6 +96,19 @@ sections:
           if:
             type: 'equals bard'
       -
+        handle: banner_title
+        field:
+          input_type: text
+          antlers: false
+          display: 'Banner Title'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+          if:
+            type: 'equals banner'
+      -
         handle: banner
         field:
           mode: list

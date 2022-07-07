@@ -7,7 +7,8 @@ default: true
 banner:
   - content/lagoa.jpg
 updated_by: 63d2f455-f9f5-44fe-8a26-25b54dd98a09
-updated_at: 1657099130
+updated_at: 1657174831
 go_over: true
 how_much: '15'
+banner_title: 'test titel'
 ---

@@ -1,23 +1,8 @@
 {{ if get:q }}
-    {{# zoek balk #}}
-    <div class="w-full h-full max-h-[50vh] bg-red-asw text-white py-6 flex">
-        <div class="container flex flex-grow flex-col justify-around">
-            <h1 class="mx-auto w-fit">Heb je hulp nodig?</h1>
-
-            <form action="/" class="relative max-w-screen-md w-full mx-auto">
-                <vue-input type="text" name="q" placeholder="search..."></vue-input>
-                <button type="submit" class="absolute top-5 right-5 text-red-asw">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </form>
-        </div>
-    </div>
 
     {{ partial:components.searchresults }}
 
 {{ else }}
-
-    {{ partial:components.search }}
 
     {{ if sections }}
 
@@ -26,7 +11,7 @@
             {{ if type }}
 
                 {{ partial:components.{{ type }} title="{{ title }}" item__count="{{ count }}" item_index="{{ index }}" }}
-                {{ index }}
+                
             {{ /if }}
 
         {{ /sections }}

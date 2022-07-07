@@ -1,8 +1,8 @@
 <div class="w-full bg-red-asw text-white shadow">
-    <div class="container flex flex-row gap-4 overflow-hidden">
+    <div class="container flex flex-row gap-4">
 
         {{ nav:breadcrumbs include_home="true" }}
-            <div class="flex flex-row gap-x-4{{ if is_current }} polygon bg-white text-red-asw px-6{{ /if }}">
+            <div class="flex flex-row gap-x-4 hover:shadow-md {{ if is_current }} polygon bg-white text-red-asw px-6{{ /if }}">
                 {{ if !first }} <span> -> </span> {{ /if }}
                 <a href="{{ url }}">{{ title }}</a>
             </div>
