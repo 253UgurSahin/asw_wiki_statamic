@@ -17470,7 +17470,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "w-fit fixed flex flex-col items-end z-40 bottom-1 right-1 gap-y-4"
+  "class": "w-fit fixed flex flex-col items-end z-40 bottom-1 right-1 sm:right-3 gap-y-4"
 };
 
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
@@ -17492,7 +17492,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     onClick: _cache[1] || (_cache[1] = function ($event) {
       return _ctx.open = !_ctx.open;
     }),
-    "class": "w-fit flex justify-center items-center text-4xl sm:text-5xl md:text-6xl cursor-pointer bg-white rounded-full p-1 text-red-asw"
+    "class": "w-fit flex justify-center items-center text-5xl md:text-6xl cursor-pointer bg-white rounded-full p-1 text-red-asw hover:shadow-md transition-all"
   }, _hoisted_3)]);
 }
 
@@ -17557,6 +17557,18 @@ var app = (0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)({
   }
 });
 app.mount('#app');
+
+/***/ }),
+
+/***/ "./resources/css/cp.css":
+/*!******************************!*\
+  !*** ./resources/css/cp.css ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ }),
 
@@ -18047,7 +18059,8 @@ function compileToFunction(template, options) {
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/site": 0,
-/******/ 			"css/tailwind": 0
+/******/ 			"css/tailwind": 0,
+/******/ 			"vendor/app/css/cp": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -18097,8 +18110,9 @@ function compileToFunction(template, options) {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/tailwind"], () => (__webpack_require__("./resources/js/site.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/tailwind"], () => (__webpack_require__("./resources/css/tailwind.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/tailwind","vendor/app/css/cp"], () => (__webpack_require__("./resources/js/site.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/tailwind","vendor/app/css/cp"], () => (__webpack_require__("./resources/css/cp.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/tailwind","vendor/app/css/cp"], () => (__webpack_require__("./resources/css/tailwind.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

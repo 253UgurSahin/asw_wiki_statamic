@@ -1,10 +1,8 @@
 {{ if current_uri !== '/' || get:q }}
-    <div class="py-5 bg-zinc-800">
-        <form action="/" class="relative max-w-screen-md w-full mx-auto">
-            <vue-input type="text" name="q" placeholder="search..."></vue-input>
-            <button type="submit" class="absolute top-5 right-5 hover:text-red-asw">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
-    </div>
+    <form action="/" class="relative max-w-screen-sm w-full mx-auto">
+        <vue-input type="text" name="q" placeholder="search..."></vue-input>
+        <button type="submit" class="absolute top-5 right-5 hover:text-red-asw">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </form>
 {{ /if }}

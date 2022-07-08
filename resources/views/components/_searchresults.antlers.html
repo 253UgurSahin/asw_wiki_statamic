@@ -18,12 +18,12 @@
     <h1>Instructions</h1>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {{ collection:instructions tags:contains:title:contains="{{ get:q }}" }}
-            {{ if count > 0 }}
-                {{ partial:components.cards.instruction }}
+        {{ search:results index="instructions" }}
+            {{ if no_results }}
+                <h2>No results found for {{ get:q }}.</h2>
             {{ else }}
-                <p>No reults for {{ get:q }}</p>
+                {{ partial:components.cards.instruction }}
             {{ /if }}
-        {{ /collection:instructions }}
+        {{ /search:results }}
     </div>
 </div>

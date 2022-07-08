@@ -25,10 +25,10 @@ return [
 
     'indexes' => [
 
-        'default' => [
+        'instructions' => [
             'driver' => 'local',
-            'searchables' => ['collection:instructions', 'taxonomy:category'],
-            'fields' => ['title'],
+            'searchables' => ['collection:instructions'],
+            'fields' => ['title', 'tags', 'category'],
         ],
 
         // 'blog' => [
