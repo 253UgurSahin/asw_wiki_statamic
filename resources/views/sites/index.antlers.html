@@ -1,14 +1,14 @@
 {{# Categories #}}
 <div class="container mt-16 mb-8">
-    <h1>Category</h1>
+    <h1>Sites</h1>
 
     <div class="flex flex-wrap gap-4">
-        {{ taxonomy:category }}
+        {{ taxonomy:sites }}
             {{ if count > 0 }}
                 {{ partial:components.cards.cat }}
             {{ else }}
-                <p>No reults for {{ get:q }}</p>
+                <p>No reults</p>
             {{ /if }}
-        {{ /taxonomy:category }}
+        {{ /taxonomy:sites }}
     </div>
 </div>

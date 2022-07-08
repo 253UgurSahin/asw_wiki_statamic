@@ -1,0 +1,25 @@
+{{# Instructions #}}
+<div class="container mt-16 mb-8">
+    <h1>Instructions</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {{ collection:instructions taxonomy:sites="{{ slug }}" }}
+            {{ if count > 0 }}
+                <a href="{{ url }}">
+                    <div class="bg-white shadow-md hover:shadow-xl transition p-6">
+                        {{# header #}}
+                        <div class="flex flex-wrap justify-between">
+                            <p class="font-bold text-3xl"> {{ title }} </p>
+                            <p>{{ updated_at }}</p>
+                        </div>
+                        <div class="prose">
+                            {{ sort_explan | safe_truncate:90 }}
+                        </div>
+                    </div>
+                </a>
+            {{ else }}
+                <p>No reults for {{ title }}</p>
+            {{ /if }}
+        {{ /collection:instructions }}
+    </div>
+</div>

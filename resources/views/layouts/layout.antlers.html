@@ -8,7 +8,6 @@
         <meta name="theme-color" content="00908F">
 
         <title>{{ title }} | {{ settings:site_name }}</title>
-
         
         <!-- Styles -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
@@ -18,24 +17,24 @@
         <!-- Script -->
         <script src="{{ mix src='/js/site.js' }}" defer></script>
     </head>
-
-    <body id="app" class="font-sans leading-normal text-gray-800 bg-gray-100">
+    <body id="app" class="relative font-sans leading-normal text-gray-800 bg-gray-100">
         <div class="relative flex flex-row">
+
             {{ partial:meta.nav }}
 
             <div class="w-full flex flex-col">
-                
+                {{ partial:meta.pagesnav }}
                 {{ partial:components.search }}
-                
                 {{ partial:meta.breadcrumbs }}
-                
+
                 <div class="flex-grow">
                     {{ template_content }}
                 </div>
-                
-                {{ partial:meta.footer }}    
+
+                {{ partial:meta.help }}
+                {{ partial:meta.footer }}
             </div>
+
         </div>
     </body>
-
 </html>

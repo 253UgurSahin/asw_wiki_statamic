@@ -4,27 +4,28 @@
 
 {{ else }}
 
+{{# zoek balk #}}
+<div class="w-full h-[60vh] bg-red-asw text-white py-6 flex bg-top bg-cover inner-shadow" style="background-image: url('assets/site/aswatson.jpg')">
+    <div class="container flex flex-grow flex-col justify-around">
+        <h1 class="mx-auto w-fit">Need Help?</h1>
+
+        <form action="/" class="relative max-w-screen-md w-full mx-auto">
+            <vue-input type="text" name="q" placeholder="search..."></vue-input>
+            <button type="submit" class="absolute top-5 right-5 text-gray-900 hover:text-red-asw">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+    </div>
+</div>
+
+
 {{# Categories #}}
 <div class="container mt-16 mb-8">
     <h1>Category</h1>
 
     <div class="flex flex-wrap gap-4">
         {{ taxonomy:category }}
-            <a href="{{ url }}">
-                <div class="px-12 h-20 flex flex-row gap-x-4 justify-center items-center" style="background-color: #{{ "2f34f6" | shuffle }};">
-                    {{ icon }}
-                        {{ if extension === "svg" }}
-                            {{ svg src="{{ url }}" class="fill-current text-white h-12 w-12" }}
-                        {{ else }}
-                            <img src="{{ url }}" alt="{{ alt }}">
-                        {{ /if }}
-                    {{ /icon }}
-
-                    <p class="font-bold text-3xl text-white">
-                        {{ title }}
-                    </p>
-                </div>
-            </a>
+            {{ partial:components.cards.cat }}
         {{ /taxonomy:category }}
     </div>
 </div>
@@ -33,23 +34,9 @@
 <div class="container mt-16 mb-8">
     <h1>Instructions</h1>
 
-    <div class="flex flex-wrap gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {{ collection:instructions }}
-            <a href="{{ url }}">
-                <div class="px-12 h-20 flex justify-center items-center" style="background-color: #{{ "2f34ff" | shuffle }};">
-                    {{ icon }}
-                        {{ if extension === "svg" }}
-                            {{ svg src="{{ url }}" class="fill-current text-white h-12 w-12" }}
-                        {{ else }}
-                            <img src="{{ url }}" alt="{{ alt }}">
-                        {{ /if }}
-                    {{ /icon }}
-
-                    <p class="font-bold text-3xl text-white">
-                        {{ title }}
-                    </p>
-                </div>
-            </a>
+            {{ partial:components.cards.instruction }}
         {{ /collection:instructions }}
     </div>
 </div>

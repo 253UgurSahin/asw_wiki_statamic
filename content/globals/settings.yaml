@@ -3,3 +3,16 @@ data:
   site_name: 'ASW Wiki'
   favicon: meta/asw_logo.png
   nav_image: meta/asw_logo.png
+  info_links:
+    -
+      title: 'Thuiswerk spullen NL'
+      url: 'https://forms.office.com/Pages/ResponsePage.aspx?id=-Xh6l7vMQUaD1YJWupCc6iXrENlcHIxDpzHB3MDjEf5UNlg0SDdDOEw2N1BURFVHU1RZUUpONERSUy4u'
+      assets_field: site/aswatson.jpg
+    -
+      title: 'Thuiswerk spullen Antwerpen'
+      url: 'https://forms.office.com/Pages/ResponsePage.aspx?id=-Xh6l7vMQUaD1YJWupCc6iXrENlcHIxDpzHB3MDjEf5UNVpXT0o0M1cyUFNVUUlOV1JGNUVPQTlPQy4u'
+      assets_field: site/aswatson.jpg
+    -
+      title: Topdesk
+      url: 'https://topdesk.uk.aswatson.net/tas/public/ssp/'
+      assets_field: site/scratches.svg
