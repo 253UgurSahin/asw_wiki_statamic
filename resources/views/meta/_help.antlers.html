@@ -1,0 +1,10 @@
+<vue-help>
+    {{ settings:info_links }}
+        <a href="{{ url }}" class="group">
+            <div class="flex flex-row items-center gap-x-2" style="color: #{{ "2f34f6" | shuffle }};">
+                {{ partial:components.assets.image }}
+                <p class="text-zinc-800 group-hover:underline sm:text-lg">{{ title }}</p>
+            </div>                            
+        </a>
+    {{ /settings:info_links }}                    
+</vue-help>

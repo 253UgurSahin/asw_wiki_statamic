@@ -10,12 +10,18 @@ sections:
           validate:
             - required
       -
-        handle: sort_explan
+        handle: icon
         field:
-          antlers: false
-          display: 'Sort explanation'
-          type: textarea
-          icon: textarea
+          mode: list
+          container: assets
+          folder: /
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Icon
+          type: assets
+          icon: assets
           listable: hidden
           instructions_position: above
           visibility: visible
@@ -44,17 +50,45 @@ sections:
           type: slug
           localizable: true
       -
+        handle: sites
+        field:
+          type: terms
+          taxonomies:
+            - sites
+          display: Sites
+          mode: typeahead
+          max_items: 1
+          create: true
+          icon: taxonomy
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
         handle: category
         field:
           type: terms
           taxonomies:
             - category
           display: Category
-          mode: select
+          mode: typeahead
           instructions_position: above
           listable: hidden
           create: true
           validate:
             - required
           max_items: 1
+          visibility: visible
+      -
+        handle: tags
+        field:
+          type: terms
+          taxonomies:
+            - tags
+          display: Tags
+          mode: typeahead
+          create: true
+          icon: taxonomy
+          listable: hidden
+          instructions_position: above
+          visibility: visible
 title: Instructions

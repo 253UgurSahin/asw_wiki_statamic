@@ -18,10 +18,10 @@ module.exports = {
             },
             container: {
                 center: true,
-                padding: '2rem'
+                padding: '1rem'
             },
             colors: {
-                'red-asw': '#e21d38',
+                'red-asw': '#e30613',
                 'teal': '#008483',
                 'teal-light': '#a6d0cf'
             }

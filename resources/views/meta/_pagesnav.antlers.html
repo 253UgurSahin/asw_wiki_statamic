@@ -1,0 +1,24 @@
+<nav class="w-full bg-gray-200 py-2 font-semibold">
+    <div class="container flex flex-wrap justify-between">
+        <div class="flex-grow flex flex-row items-center">
+            <a href="/">
+                <div class="h-12 w-auto flex flex-wrap gap-x-4">
+                    <img src="/assets/meta/asw_logo.png" alt="asw logo" class="h-full">
+                    <img src="/assets/meta/asw_text.png" alt="asw logo text" class="h-full hidden sm:inline-block">
+                </div>
+            </a>
+
+            <div class="hidden md:flex flex-row gap-x-4">
+                {{ nav:collection:pages }}
+                    <a href="{{ url }}">
+                        {{ title }}
+                    </a>
+                {{ /nav:collection:pages }}
+            </div>
+        </div>
+
+        {{ partial:components.search }}
+
+        <div class="md:hidden"></div>
+    </div>
+</nav>
