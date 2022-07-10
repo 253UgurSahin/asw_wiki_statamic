@@ -1,8 +1,3 @@
 {{ if current_uri !== '/' || get:q }}
-    <form action="/" class="relative max-w-screen-sm w-full mx-auto">
-        <vue-input type="text" name="q" placeholder="search..."></vue-input>
-        <button type="submit" class="absolute top-5 right-5 hover:text-red-asw">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-    </form>
+    <vue-search></vue-search>
 {{ /if }}

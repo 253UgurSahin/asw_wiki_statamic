@@ -1,12 +1,12 @@
 <a href="{{ url }}">
-    <div class="px-4 sm:px-8 md:px-12 h-20 flex flex-row gap-x-4 justify-center items-center" style="background-color: #{{ "2f3ff6" | shuffle }}; color: #{{ "2a3496" | shuffle }};">
+    <div class="transition hover:shadow-md group px-4 sm:px-8 md:px-12 h-20 flex flex-row gap-x-4 justify-center items-center bg-red-asw text-white">
         {{ icon }}
-            <div class="w-10 sm:w-12 h-10 sm:h-12">
+            <div class="w-10 sm:w-12 h-10 sm:h-12 transition-all transform group-hover:scale-110">
                 {{ partial:components.assets.image }}
             </div>
         {{ /icon }}
 
-        <p class="font-bold text-2xl sm:text-3xl">
+        <p class="font-bold text-2xl sm:text-3xl transition-all transform group-hover:scale-110">
             {{ title }}
         </p>
     </div>

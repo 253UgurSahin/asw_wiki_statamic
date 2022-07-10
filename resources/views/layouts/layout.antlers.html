@@ -18,23 +18,21 @@
         <script src="{{ mix src='/js/site.js' }}" defer></script>
     </head>
     <body id="app" class="relative font-sans leading-normal text-gray-800 bg-gray-100">
-        <div class="relative flex flex-row">
+        <div class="relative flex flex-col min-h-screen">
+
+            {{ partial:meta.pagesnav }}
+            
+            {{ partial:meta.breadcrumbs }}
+
+            <div class="flex-grow">
+                {{ template_content }}
+            </div>
+
+            {{ partial:meta.help }}
+            
+            {{ partial:meta.footer }}
 
             {{ partial:meta.nav }}
-
-            <div class="w-full flex flex-col">
-                {{ partial:meta.pagesnav }}
-                
-                {{ partial:meta.breadcrumbs }}
-
-                <div class="flex-grow">
-                    {{ template_content }}
-                </div>
-
-                {{ partial:meta.help }}
-                
-                {{ partial:meta.footer }}
-            </div>
 
         </div>
     </body>

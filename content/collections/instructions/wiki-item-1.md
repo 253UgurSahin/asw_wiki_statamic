@@ -1,7 +1,7 @@
 ---
 id: ffb429cd-8924-4e42-885d-5d5b6141e5c4
 blueprint: instructions
-title: 'Wiki item 1'
+title: 'Wiki item 1 alfa'
 updated_by: 63d2f455-f9f5-44fe-8a26-25b54dd98a09
 updated_at: 1657109662
 banner:
@@ -9,8 +9,8 @@ banner:
 category: office-365
 tags:
   - tester
-  - beta
-  - test
+  - tags
+  - alfa
 entries:
   - 763d2864-4b0e-447f-a3aa-e9e4426729b9
   - 9918eba6-32e5-4170-9d1f-cfef45ecc644

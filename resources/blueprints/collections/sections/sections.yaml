@@ -68,6 +68,8 @@ sections:
           buttons:
             - h2
             - h3
+            - h4
+            - h5
             - bold
             - italic
             - unorderedlist
@@ -95,6 +97,7 @@ sections:
           instructions_position: above
           if:
             type: 'equals bard'
+          visibility: visible
       -
         handle: banner_title
         field:

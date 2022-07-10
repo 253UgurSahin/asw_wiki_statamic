@@ -1,7 +1,7 @@
 ---
 id: 6b05da4e-87c3-423f-b326-668b0abfca1d
 blueprint: instructions
-title: 'Test Rob'
+title: 'Test Rob tags'
 entries:
   - 763d2864-4b0e-447f-a3aa-e9e4426729b9
   - 029b7826-979b-4cb3-b400-3304c74ee0a0
@@ -16,7 +16,5 @@ sites: bnl-werkplekbeheer
 tags:
   - tester
   - tags
-  - beta
-  - test
 icon: site/scratches.svg
 ---

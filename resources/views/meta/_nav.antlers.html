@@ -1,9 +1,22 @@
-<nav class="hidden sm:inline-block sticky top-0 h-screen bg-zinc-800">
-    <div class="flex flex-col px-2 md:px-4 py-10">
-        {{ partial:meta.nav.logo }}
+{{# Desktop #}}
+<nav class="hidden md:flex fixed top-0 left-0 h-screen items-center">
+    <div class="flex flex-col justify-center items-center p-2 bg-zinc-800">
+        
+        {{ partial:meta.nav.items }}
 
-        <div class="mt-10 flex flex-col gap-y-2">
-            {{ partial:meta.nav.items }}
-        </div>
+    </div>
+</nav>
+
+
+{{# Mobile #}}
+<nav class="md:hidden w-full sticky bottom-0 z-20">
+    <div class="w-full flex flex-col justify-center items-center px-2 py-1 bg-zinc-800">
+        {{ taxonomy:sites }}
+            <a href="{{ url }}" class="z-50">
+                <div class="h-10 w-10 flex flex-wrap justify-center items-center bg-red-asw rounded-2xl p-2 transition-all duration-300 hover:rounded-3xl">
+                    {{ svg src="{{ icon }}" class="fill-current h-full w-full text-white" }}
+                </div>
+            </a>
+        {{ /taxonomy:sites }}
     </div>
 </nav>
