@@ -2,7 +2,7 @@
     true
 {{ else }}
     {{ banner }}
-        <div class="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] bg-center bg-no-repeat bg-cover inner-shadow flex flex-wrap" style="background-image: url('{{ url }}'); {{ if go_over }} margin-bottom: -{{ how_much }}rem; {{ /if }}">
+        <div class="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] bg-center bg-no-repeat bg-cover inner-shadow flex flex-wrap" style="background-image: url('{{ config:app:server_url }}{{ url }}'); {{ if go_over }} margin-bottom: -{{ how_much }}rem; {{ /if }}">
             <div class="container w-full flex-grow flex pt-20">
                 <h1 class="text-white">{{ banner_title }}</h1>
             </div>

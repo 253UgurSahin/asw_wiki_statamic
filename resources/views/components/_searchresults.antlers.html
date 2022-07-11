@@ -1,6 +1,8 @@
 {{# Categories #}}
 <div class="container mt-16 mb-8">
-    <h1>Category</h1>
+    <div class="flex flex-wrap items-end mb-12">
+        <h1>Instructions</h1>
+    </div>
 
     <div class="flex flex-wrap gap-4">
         {{ taxonomy:category title:contains="{{ get:q }}" }}
@@ -15,14 +17,22 @@
 
 {{# Instructions #}}
 <div class="container mt-16 mb-8">
-    <h1>Instructions</h1>
+    <div class="flex flex-wrap items-end mb-12">
+        <h1>Instructions</h1>
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {{ search:results index="instructions" }}
+    <div class="">
+        {{ search:results index="instructions"  paginate="16" as="items" }}
             {{ if no_results }}
                 <h2>No results found for {{ get:q }}.</h2>
             {{ else }}
-                {{ partial:components.cards.instruction }}
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {{ items }}
+                        {{ partial:components.cards.instruction }}
+                    {{ /items }}
+                </div>
+
+                {{ partial:meta.paginate }}
             {{ /if }}
         {{ /search:results }}
     </div>

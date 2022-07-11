@@ -5,7 +5,7 @@
 {{ else }}
 
 {{# zoek balk #}}
-<div class="w-full h-[60vh] bg-red-asw text-white py-6 flex bg-top bg-cover inner-shadow" style="background-image: url('assets/site/aswatson.jpg')">
+<div class="w-full h-[60vh] bg-red-asw text-white py-6 flex bg-top bg-cover inner-shadow" style="background-image: url('{{ config:app:server_url }}/assets/site/aswatson.jpg')">
     <div class="container flex flex-grow flex-col justify-around">
         <h1 class="mx-auto w-fit">Need Help?</h1>
 
@@ -15,7 +15,10 @@
 
 {{# Categories #}}
 <div class="container mt-16 mb-8">
-    <h1>Category</h1>
+    <div class="mb-12">
+        <h1>Category</h1>
+    </div>
+
 
     <div class="flex flex-wrap gap-4">
         {{ taxonomy:category }}
@@ -26,11 +29,20 @@
 
 {{# Instructions #}}
 <div class="container mt-16 mb-8">
-    <h1>Instructions</h1>
+    <div class="mb-12">
+        <h1>Instructions</h1>
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {{ collection:instructions }}
-            {{ partial:components.cards.instruction }}
+    <div class="">
+        {{ collection:instructions paginate="10" as="items"}}
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {{ items }}
+                    {{ partial:components.cards.instruction }}
+                {{ /items }}
+            </div>
+
+            {{ partial:meta.paginate }}
         {{ /collection:instructions }}
     </div>
 </div>

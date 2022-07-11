@@ -4,7 +4,7 @@
             {{ if extension === "svg" }}
                 {{ svg src="{{ url }}" class="fill-current w-full h-auto" }}
             {{ else }}
-                <img src="{{ url }}" alt="{{ alt }}" class="w-auto h-auto">
+                <img src="{{ config:app:server_url }}/{{ url }}" alt="{{ alt }}" class="w-auto h-auto">
             {{ /if }}
         </div>
     {{ /icon }}

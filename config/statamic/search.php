@@ -27,8 +27,8 @@ return [
 
         'instructions' => [
             'driver' => 'local',
-            'searchables' => ['collection:instructions'],
-            'fields' => ['title', 'tags', 'category'],
+            'searchables' => 'collection:instructions',
+            'fields' => ['title', 'tags'],
         ],
 
         // 'blog' => [

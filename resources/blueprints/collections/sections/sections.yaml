@@ -129,19 +129,20 @@ sections:
           if:
             type: 'equals banner'
       -
-        handle: collection
+        handle: section_entries
         field:
           mode: default
           create: true
           collections:
             - instructions
-          display: Collection
+          display: 'Section Entries'
           type: entries
           icon: entries
           listable: hidden
           instructions_position: above
           if:
             type: 'equals entries'
+          visibility: visible
       -
         handle: grid_field
         field:

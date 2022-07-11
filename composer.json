@@ -1,6 +1,7 @@
 {
     "name": "statamic/statamic",
     "description": "Statamic",
+    "platform-check": false,
     "keywords": [
         "statamic",
         "cms",
@@ -18,7 +19,6 @@
         "laravel/sanctum": "^2.14"
     },
     "require-dev": {
-        "barryvdh/laravel-debugbar": "^3.6",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.13",
         "mockery/mockery": "^1.4.4",

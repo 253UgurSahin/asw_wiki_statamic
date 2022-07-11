@@ -14,7 +14,7 @@
         {{ taxonomy:sites }}
             <a href="{{ url }}" class="z-50">
                 <div class="h-10 w-10 flex flex-wrap justify-center items-center bg-red-asw rounded-2xl p-2 transition-all duration-300 hover:rounded-3xl">
-                    {{ svg src="{{ icon }}" class="fill-current h-full w-full text-white" }}
+                    {{ svg src="{{ config:app:server_url }}/{{ icon }}" class="fill-current h-full w-full text-white" }}
                 </div>
             </a>
         {{ /taxonomy:sites }}

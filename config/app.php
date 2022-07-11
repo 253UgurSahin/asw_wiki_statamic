@@ -15,7 +15,10 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Statamic'),
+    'name' => env('APP_NAME', 'ASW - Wiki'),
+
+    'server_url' => "http://aswwiki.com/public",
+    'cp_server' => "public/",
 
     /*
     |--------------------------------------------------------------------------
