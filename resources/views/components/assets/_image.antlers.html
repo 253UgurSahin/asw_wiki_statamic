@@ -1,0 +1,15 @@
+{{ if icon }}
+    {{ icon }}
+        <div class="w-12 h-12">
+            {{ if extension === "svg" }}
+                {{ svg src="{{ url }}" class="fill-current w-full h-auto" }}
+            {{ else }}
+                <img src="{{ config:app:url }}/{{ url }}" alt="{{ alt }}" class="w-auto h-auto">
+            {{ /if }}
+        </div>
+    {{ /icon }}
+{{ else }}
+    <div class="w-12 h-12">
+        {{ svg src="/assets/site/scratches.svg" class="fill-current w-full h-auto" }}
+    </div>
+{{ /if }}

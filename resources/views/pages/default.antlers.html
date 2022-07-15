@@ -1,0 +1,21 @@
+{{ if get:q }}
+
+    {{ partial:components.searchresults }}
+
+{{ else }}
+
+    {{ if sections }}
+
+        {{ sections }}
+
+            {{ if type }}
+
+                {{ partial:components.{{ type }} title="{{ title }}" item_count="{{ count }}" item_index="{{ index }}" }}
+                
+            {{ /if }}
+
+        {{ /sections }}
+
+    {{ /if }}
+
+{{ /if }}

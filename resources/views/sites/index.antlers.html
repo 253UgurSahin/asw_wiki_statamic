@@ -1,0 +1,16 @@
+{{# Categories #}}
+<div class="container mt-16 mb-8">
+    <div class="mb-12">
+        <h2>Sites</h2>
+    </div>
+
+    <div class="flex flex-wrap gap-4">
+        {{ taxonomy:sites }}
+            {{ if count > 0 }}
+                {{ partial:components.cards.cat }}
+            {{ else }}
+                <p>No reults</p>
+            {{ /if }}
+        {{ /taxonomy:sites }}
+    </div>
+</div>

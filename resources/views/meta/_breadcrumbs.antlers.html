@@ -1,0 +1,12 @@
+<div class="w-full bg-red-asw text-white shadow">
+    <div class="container flex flex-col sm:flex-row gap-4">
+
+        {{ nav:breadcrumbs include_home="true" }}
+            <div class="flex flex-row gap-x-4 hover:shadow-md px-6 {{ if is_current }} sm:px-6 polygon bg-white text-red-asw {{ else }} sm:px-0 {{ /if }}">
+                {{ if !first }} <span> -> </span> {{ /if }}
+                <a href="{{ url }}">{{ title }}</a>
+            </div>
+        {{ /nav:breadcrumbs }}
+
+    </div>
+</div>

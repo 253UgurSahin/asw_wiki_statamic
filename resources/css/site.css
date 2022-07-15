@@ -1,0 +1,27 @@
+@import url('https://rsms.me/inter/inter.css');
+
+body {
+    @apply text-gray-800;
+    font-feature-settings: "frac" 1;
+}
+
+h2 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-none;
+}
+
+/* Responsive Wangjangling */
+@screen lg {
+    h1 {
+        @apply text-6xl;
+    }
+}
+
+.polygon {
+    -webkit-clip-path: polygon(5% 0%, 100% 0, 95% 100%, 0% 100%);
+    clip-path: polygon(5% 0%, 100% 0, 95% 100%, 0% 100%);
+}
+
+.inner-shadow {
+    -webkit-box-shadow: inset -1px 200px 150px -50px #191919; 
+    box-shadow: inset -1px 200px 150px -50px #191919;
+}

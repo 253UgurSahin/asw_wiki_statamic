@@ -1,0 +1,7 @@
+<a href="/">
+    <div class="h-12 w-12 flex flex-wrap justify-center items-center bg-white rounded-2xl p-2 md:h-14 md:w-14 transition-all duration-300 hover:rounded-3xl">
+        {{ settings:nav_image }}
+            <img src="{{ config:app:url }}/{{ url }}" alt="asw logo image" class="h-full {{ if last }} hidden sm:inline-block {{ /if }}" />
+        {{ /settings:nav_image }}
+    </div>
+</a>

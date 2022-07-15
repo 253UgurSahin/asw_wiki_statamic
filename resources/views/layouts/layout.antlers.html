@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="{{ excerpt ?? title }}">
+        <meta name="theme-color" content="00908F">
+
+        <title>{{ title }} | {{ settings:site_name }}</title>
+        
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="{{ config:app:url }}/css/tailwind.css">
+        <link rel="shortcut icon" href="{{ config:app:url }}{{ settings:favicon }}" type="image/x-icon">
+
+        <!-- Script -->
+        <script src="{{ config:app:url }}/js/site.js" defer></script>
+    </head>
+    <body id="app" class="relative font-sans leading-normal text-gray-800 bg-gray-100">
+        <div class="relative flex flex-col min-h-screen">
+
+            {{ partial:meta.pagesnav }}
+            
+            {{ partial:meta.breadcrumbs }}
+
+            <div class="flex-grow">
+                {{ template_content }}
+            </div>
+
+            {{ partial:meta.help }}
+            
+            {{ partial:meta.footer }}
+
+            {{ partial:meta.nav }}
+
+        </div>
+    </body>
+</html>

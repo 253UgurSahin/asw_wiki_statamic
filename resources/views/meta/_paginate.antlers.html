@@ -1,0 +1,53 @@
+{{ paginate }}
+{{ if total_pages !== 1 }}
+    <ul class="mx-auto flex flex-row w-56 items-center justify-between py-5">
+        {{ if prev_page }}
+            <li class="transition hover:font-semibold rounded-full hover:bg-red-asw p-1 px-3 hover:text-white"><a href="{{ prev_page }}">&laquo;</a></li>
+        {{ else }}
+            <li class="disabled"><span>&laquo;</span></li>
+        {{ /if }}
+ 
+        <div class="flex flex-row items-center gap-x-4">
+            {{ links:segments }}
+                {{ first }}
+                    {{ if page == current_page }}
+                        <li class="font-semibold rounded-full bg-red-asw p-1 px-3 text-white"><span>{{ page }}</span></li>
+                    {{ else }}
+                        <li><a class=" w-8 h-8 flex items-center justify-center transition hover:font-semibold rounded-full hover:bg-red-asw hover:text-white" href="{{ url }}">{{ page }}</a></li>
+                    {{ /if }}
+                {{ /first }}
+    
+                {{ if slider }}
+                    <li class="disabled"><span>...</span></li>
+                {{ /if }}
+    
+                {{ slider }}
+                    {{ if page == current_page }}
+                        <li class="font-semibold rounded-full bg-red-asw p-1 px-3 text-white"><span>{{ page }}</span></li>
+                    {{ else }}
+                        <li><a class=" w-8 h-8 flex items-center justify-center transition hover:font-semibold rounded-full hover:bg-red-asw hover:text-white" href="{{ url }}">{{ page }}</a></li>
+                    {{ /if }}
+                {{ /slider }}
+    
+                {{ if slider || (!slider && last) }}
+                    <li class="disabled"><span>...</span></li>
+                {{ /if }}
+    
+                {{ last }}
+                    {{ if page == current_page }}
+                        <li class="font-semibold rounded-full bg-red-asw p-1 px-3 text-white"><span>{{ page }}</span></li>
+                    {{ else }}
+                        <li><a class=" w-8 h-8 flex items-center justify-center transition hover:font-semibold rounded-full hover:bg-red-asw hover:text-white" href="{{ url }}">{{ page }}</a></li>
+                    {{ /if }}
+                {{ /last }}    
+            {{ /links:segments }}
+        </div>
+ 
+        {{ if next_page }}
+            <li><a class=" w-8 h-8 flex items-center justify-center transition hover:font-semibold rounded-full hover:bg-red-asw hover:text-white" href="{{ next_page }}">&raquo;</a></li>
+        {{ else }}
+            <li class="disabled"><span>&raquo;</span></li>
+        {{ /if }}
+    </ul>
+{{ /if }}
+{{ /paginate }}

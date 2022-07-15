@@ -1,0 +1,16 @@
+{{# Instructions #}}
+<div class="container mt-16 mb-8">
+    <div class="mb-12">
+        <h2>Instructions</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {{ collection:instructions taxonomy:category="{ slug }" }}
+            {{ if count > 0 }}
+                {{ partial:components.cards.instruction }}
+            {{ else }}
+                <p>No reults for {{ get:q }}</p>
+            {{ /if }}
+        {{ /collection:instructions }}
+    </div>
+</div>

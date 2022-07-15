@@ -1,0 +1,16 @@
+{{# Desktop #}}
+<nav class="hidden md:flex fixed top-0 left-0 h-screen items-center">
+    <div class="flex flex-col justify-center items-center p-2 bg-zinc-800">
+        
+        {{ partial:meta.nav.items }}
+
+    </div>
+</nav>
+
+
+{{# Mobile #}}
+<nav class="md:hidden w-full sticky bottom-0 z-20">
+    <div class="w-full flex flex-col justify-center items-center px-2 py-1 bg-zinc-800">
+        {{ partial:meta.nav.items }}
+    </div>
+</nav>

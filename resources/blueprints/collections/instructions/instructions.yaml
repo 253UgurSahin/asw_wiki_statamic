@@ -1,0 +1,94 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          type: text
+          required: true
+          validate:
+            - required
+      -
+        handle: icon
+        field:
+          mode: list
+          container: assets
+          folder: /
+          restrict: false
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: Icon
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  page:
+    display: page
+    fields:
+      -
+        handle: sections
+        field:
+          mode: default
+          create: true
+          collections:
+            - sections
+          display: Sections
+          type: entries
+          icon: entries
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+  sidebar:
+    display: Sidebar
+    fields:
+      -
+        handle: slug
+        field:
+          type: slug
+          localizable: true
+      -
+        handle: sites
+        field:
+          type: terms
+          taxonomies:
+            - sites
+          display: Sites
+          mode: typeahead
+          max_items: 1
+          create: true
+          icon: taxonomy
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+      -
+        handle: category
+        field:
+          type: terms
+          taxonomies:
+            - category
+          display: Category
+          mode: typeahead
+          instructions_position: above
+          listable: hidden
+          create: true
+          validate:
+            - required
+          max_items: 1
+          visibility: visible
+      -
+        handle: tags
+        field:
+          type: terms
+          taxonomies:
+            - tags
+          display: Tags
+          mode: typeahead
+          create: true
+          icon: taxonomy
+          listable: hidden
+          instructions_position: above
+          visibility: visible
+title: Instructions

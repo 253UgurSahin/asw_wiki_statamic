@@ -1,0 +1,50 @@
+{{ if get:q }}
+
+    {{ partial:components.searchresults }}
+
+{{ else }}
+
+{{# zoek balk #}}
+<div class="w-full h-[60vh] bg-red-asw text-white py-6 flex bg-top bg-cover inner-shadow" style="background-image: url('{{ config:app:url }}/assets/site/aswatson.jpg')">
+    <div class="container flex flex-grow flex-col justify-around">
+        <h2 class="mx-auto w-fit">Need Help?</h2>
+
+        <vue-search></vue-search>
+    </div>
+</div>
+
+{{# Categories #}}
+<div class="container mt-16 mb-8">
+    <div class="mb-12">
+        <h2>Category</h2>
+    </div>
+
+
+    <div class="flex flex-wrap gap-4">
+        {{ taxonomy:category }}
+            {{ partial:components.cards.cat }}
+        {{ /taxonomy:category }}
+    </div>
+</div>
+
+{{# Instructions #}}
+<div class="container mt-16 mb-8">
+    <div class="mb-12">
+        <h2>Instructions</h2>
+    </div>
+
+    <div class="">
+        {{ collection:instructions paginate="10" as="items"}}
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {{ items }}
+                    {{ partial:components.cards.instruction }}
+                {{ /items }}
+            </div>
+
+            {{ partial:meta.paginate }}
+        {{ /collection:instructions }}
+    </div>
+</div>
+
+{{ /if }}

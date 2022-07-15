@@ -1,0 +1,13 @@
+{{ taxonomy:sites }}
+    <a href="{{ url }}">
+        <div class="group relative flex flex-row items-center">
+            <div class="flex flex-wrap justify-center items-center bg-red-asw rounded-2xl p-2 h-10 w-10 md:h-14 md:w-14 transition-all duration-200 hover:rounded-3xl text-white">
+                {{ partial:components.assets.image }}
+            </div>
+
+            <div class="hidden group-hover:md:flex w-fit fixed md:left-20 bg-red-asw whitespace-nowrap text-lg text-white font-semibold rounded shadow py-1 px-3">
+                {{ title }}
+            </div>
+        </div>
+    </a>
+{{ /taxonomy:sites }}
