@@ -79,6 +79,13 @@ sections:
             - anchor
             - image
             - table
+            - underline
+            - strikethrough
+            - small
+            - superscript
+            - subscript
+            - code
+            - codeblock
           save_html: false
           toolbar_mode: fixed
           link_noopener: false
@@ -98,6 +105,8 @@ sections:
           if:
             type: 'equals bard'
           visibility: visible
+          previews: true
+          container: assets
       -
         handle: banner_title
         field:
